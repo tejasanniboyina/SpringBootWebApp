@@ -2,22 +2,23 @@ package com.teja.SImpleWebApp.model;
 
 public class Product {
 
-    private int proId;
+    private int prodId;
     private String prodName;
     private int price;
 
-    public Product(int proId, String prodName, int price) {
-        this.proId = proId;
+    //Constructor
+    public Product(int prodId, String prodName, int price) {
+        this.prodId = prodId;
         this.prodName = prodName;
         this.price = price;
     }
 
-    public int getProId() {
-        return proId;
+    public int getProdId() {
+        return prodId;
     }
 
-    public void setProId(int proId) {
-        this.proId = proId;
+    public void setProdId(int prodId) {
+        this.prodId = prodId;
     }
 
     public int getPrice() {
@@ -34,5 +35,14 @@ public class Product {
 
     public void setProdName(String prodName) {
         this.prodName = prodName;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "proId=" + prodId +
+                ", prodName='" + prodName + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
